@@ -24,6 +24,13 @@ const initialState: State = {
     maxWeight: 0,
     items: [],
   },
+  centerInventory: {
+    id: '',
+    type: '',
+    slots: 0,
+    maxWeight: 0,
+    items: [],
+  },
   additionalMetadata: new Array(),
   itemAmount: 0,
   shiftPressed: false,
@@ -69,6 +76,7 @@ export const inventorySlice = createSlice({
 
       state.history = {
         leftInventory: current(state.leftInventory),
+        centerInventory: current(state.centerInventory),
         rightInventory: current(state.rightInventory),
       };
     });
@@ -97,6 +105,7 @@ export const {
   setContainerWeight,
 } = inventorySlice.actions;
 export const selectLeftInventory = (state: RootState) => state.inventory.leftInventory;
+export const selectCenterInventory = (state: RootState) => state.inventory.centerInventory;
 export const selectRightInventory = (state: RootState) => state.inventory.rightInventory;
 export const selectItemAmount = (state: RootState) => state.inventory.itemAmount;
 export const selectIsBusy = (state: RootState) => state.inventory.isBusy;
