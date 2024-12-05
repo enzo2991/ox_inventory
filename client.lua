@@ -3,6 +3,7 @@ if not lib then return end
 require 'modules.bridge.client'
 require 'modules.interface.client'
 
+local Ped = require 'modules.ped.client'
 local Utils = require 'modules.utils.client'
 local Weapon = require 'modules.weapon.client'
 local currentWeapon
@@ -48,7 +49,7 @@ local function canOpenInventory()
         return shared.info('cannot open inventory', '(player inventory has not loaded)')
     end
 
-    if IsPauseMenuActive() then return end
+    -- if IsPauseMenuActive() then return end
 
     if invBusy or invOpen == nil or (currentWeapon?.timer or 0) > 0 then
         return shared.info('cannot open inventory', '(is busy)')
@@ -282,7 +283,7 @@ function client.openInventory(inv, data)
             rightInventory = currentInventory
         }
     })
-
+	Ped.createPed()
     if not currentInventory.coords and not inv == 'container' then
         currentInventory.coords = GetEntityCoords(playerPed)
     end
@@ -884,6 +885,7 @@ function client.closeInventory(server)
 		TriggerScreenblurFadeOut(0)
 		closeTrunk()
 		SendNUIMessage({ action = 'closeInventory' })
+		Ped.deletePed()
 		SetInterval(client.interval, 200)
 		Wait(200)
 
