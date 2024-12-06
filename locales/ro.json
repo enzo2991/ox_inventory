@@ -3,6 +3,7 @@
     "ui_give": "Oferă",
     "ui_close": "Închide",
     "ui_drop": "Aruncă",
+    "ui_rename": "Redenumește",
     "ui_removeattachments": "Scoate atașamentele",
     "ui_copy": "Copiază numărul de serie",
     "ui_durability": "Durabilitate",
@@ -91,4 +92,4 @@
     "not_enough_durability": "%s nu are suficientă durabilitate",
     "storage": "Depozit"
   }
-  
+

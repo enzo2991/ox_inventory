@@ -1651,6 +1651,22 @@ RegisterNUICallback('useItem', function(slot, cb)
 	cb(1)
 end)
 
+RegisterNUICallback('renameItem', function(slotId, cb)
+    if type(slotId) ~= 'number' then return TypeError('slotId', 'number', type(slotId)) end
+
+    SetNuiFocusKeepInput(false)
+    -- Obtenez les informations sur l'élément à partir du slotId
+    local slot = PlayerData.inventory[slotId]
+
+    local newLabel = lib.inputDialog(locale('ui_rename') .. " : " .. slot.label, {locale('ui_rename_new')})
+
+    if not newLabel then return end
+    TriggerServerEvent('ox_inventory:renameItem', slotId, newLabel[1])
+    SetNuiFocusKeepInput(true)
+    cb(1)
+
+end)
+
 local function giveItemToTarget(serverId, slotId, count)
     if type(slotId) ~= 'number' then return TypeError('slotId', 'number', type(slotId)) end
     if count and type(count) ~= 'number' then return TypeError('count', 'number', type(count)) end

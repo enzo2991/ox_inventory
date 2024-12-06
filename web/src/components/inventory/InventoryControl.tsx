@@ -5,6 +5,7 @@ import { selectItemAmount, setItemAmount } from '../../store/inventory';
 import { DragSource } from '../../typings';
 import { onUse } from '../../dnd/onUse';
 import { onGive } from '../../dnd/onGive';
+import { onRename } from '../../dnd/onRename';
 import { fetchNui } from '../../utils/fetchNui';
 import { Locale } from '../../store/locale';
 import UsefulControls from './UsefulControls';
@@ -19,6 +20,13 @@ const InventoryControl: React.FC = () => {
     accept: 'SLOT',
     drop: (source) => {
       source.inventory === 'player' && onUse(source.item);
+    },
+  }));
+
+  const [, rename] = useDrop<DragSource, void, any>(() => ({
+    accept: 'SLOT',
+    drop: (source) => {
+      source.inventory === 'player' && onRename(source.item);
     },
   }));
 
@@ -52,6 +60,9 @@ const InventoryControl: React.FC = () => {
           </button>
           <button className="inventory-control-button" ref={give}>
             {Locale.ui_give || 'Give'}
+          </button>
+          <button className="inventory-control-button" ref={rename}>
+            {Locale.ui_rename || 'Rename'}
           </button>
           <button className="inventory-control-button" onClick={() => fetchNui('exit')}>
             {Locale.ui_close || 'Close'}
