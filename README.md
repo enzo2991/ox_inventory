@@ -17,7 +17,7 @@ https://github.com/overextended/ox_inventory/releases/latest/download/ox_invento
 
 ## 📷 Preview
 
-![Capture d'écran 2024-12-06 021617](https://github.com/user-attachments/assets/6d5efac4-85c5-41c3-b2c7-166fbf03bf2a)
+![img.png](img.png)
 
 
 ## Supported frameworks
