@@ -3,6 +3,7 @@
     "ui_give": "Gi",
     "ui_close": "Lukk",
     "ui_drop": "Slipp",
+    "ui_rename": "Gi nytt navn",
     "ui_removeattachments": "Fjern vedlegg",
     "ui_copy": "Kopier serienummer",
     "ui_durability": "Holdbarhet",
@@ -90,4 +91,3 @@
     "open_crafting_bench": "Åpne lagebenk",
     "not_enough_durability": "%s har ikke nok holdbarhet"
   }
-  

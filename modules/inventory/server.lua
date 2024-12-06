@@ -2475,6 +2475,24 @@ end
 lib.callback.register('ox_inventory:giveItem', giveItem)
 RegisterServerEvent('ox_inventory:giveItem', function(...) giveItem(source, ...) end)
 
+RegisterServerEvent('ox_inventory:renameItem', function(slot, newLabel)
+    local inventory = Inventories[source]
+
+    if not type(newLabel) == "string" then return end
+
+    local item = inventory.items[slot]
+
+    if not item then return end
+
+    if newLabel == "" then item.metadata.label = nil else
+        item.metadata.label = newLabel
+    end
+
+
+    Inventory.SetMetadata(source, item.slot, item.metadata)
+end)
+
+
 local function updateWeapon(source, action, value, slot, specialAmmo)
 	local inventory = Inventories[source]
 
