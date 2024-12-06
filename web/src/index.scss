@@ -329,13 +329,28 @@ button:active {
 
 .inventory-grid-container{
   display: flex;
+  flex-direction: column;
   padding: 10px;
+  gap: 10px;
   justify-content: center;
   align-items: center;
   background-color: $backgroundColor;
   border-radius: 5px;
   flex-grow: 1;
   max-height: 650px;
+  .case {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    .takecase {
+      color: lightgray;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+  }
   .slot {
     display: grid;
     grid-template-columns: repeat($gridCols, $gridSize);
@@ -412,10 +427,13 @@ button:active {
   font-size: 12px;
 }
 
+
 .inventory-slot-number {
-  background-color: white;
+  background-color: lightgray;
   color: black;
   height: 12px;
+  border-style: outset;
+  border-width: 1px;
   border-top-left-radius: 0.25vh;
   border-bottom-right-radius: 0.25vh;
   padding: 3px;

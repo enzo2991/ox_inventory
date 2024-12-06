@@ -47,6 +47,7 @@ const Inventory: React.FC = () => {
         <div className="inventory-wrapper">
           <div className='inventory-stash'>
             <LeftInventory />
+            {/* <CenterInventory />  */}
             <RightInventory />
           </div>
           <InventoryControl />

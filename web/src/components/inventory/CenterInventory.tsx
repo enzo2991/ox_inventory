@@ -5,6 +5,6 @@ import { selectCenterInventory } from '../../store/inventory';
 const CenterInventory: React.FC = () => {
     const centerInventory = useAppSelector(selectCenterInventory);
     
-    return (<InventoryClothes inventory={centerInventory}/>);
+    return <InventoryClothes inventory={centerInventory}/>;
 }
 export default CenterInventory;
