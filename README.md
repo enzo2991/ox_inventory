@@ -13,7 +13,7 @@ https://overextended.dev/ox_inventory
 
 ## 💾 Download
 
-https://github.com/overextended/ox_inventory/releases/latest/download/ox_inventory.zip
+https://github.com/enzo2991/ox_inventory/releases/download/v1.0.0/ox_inventory.zip
 
 ## 📷 Preview
 
