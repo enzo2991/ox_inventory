@@ -117,7 +117,9 @@ const InventorySlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotProps> =
     }
   };
 
+  
   const refs = useMergeRefs([connectRef, ref]);
+
 
   return (
     <div
@@ -131,7 +133,10 @@ const InventorySlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotProps> =
             ? 'brightness(80%) grayscale(100%)'
             : undefined,
         opacity: isDragging ? 0.4 : 1.0,
-        backgroundImage: `url(${item?.name ? getItemUrl(item as SlotWithItem) : 'none'}`,
+        backgroundImage:
+        inventoryType === 'player' && item.slot >= 30 && item.slot <= 46 && !item?.name 
+        ? `url(nui://ox_inventory/web/images/slots/slot_${item.slot}.png)`
+        : `url(${item?.name ? getItemUrl(item as SlotWithItem) : 'none'}`,
         border: isOver ? '1px dashed rgba(255,255,255,0.4)' : '',
       }}
     >

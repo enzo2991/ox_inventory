@@ -9,7 +9,7 @@ $secondaryColorDark: rgba(12, 12, 12, 0.8);
 
 $gridCols: 5;
 $gridRows: 5;
-$gridSize: 10.5vh;
+$gridSize: 10vh;
 $gridGap: 2px;
 $containerSize: calc(#{$gridRows} * #{$gridSize + 0.22vh} + #{$gridRows} * #{$gridGap});
 $backgroundColor: rgba(20, 20, 20, 0.5);
@@ -275,8 +275,8 @@ button:active {
   padding: 10px;
   .inventory-bar-container {
     display: grid;
-    height: 100px;
     grid-template-columns: repeat(5, $gridSize);
+    grid-auto-rows: $gridSize + 0.28vh;
     gap: $gridGap;
   }
 }
@@ -327,6 +327,30 @@ button:active {
   }
 }
 
+.inventory-clothing-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  .inventory-clothing-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .inventory-clothing-middle{
+    display: flex;
+    gap:300px;
+  }
+
+  .slot-container{
+    display: grid;
+    grid-template-columns: $gridSize;
+    grid-auto-rows: $gridSize + 0.28vh;
+    gap: $gridGap;
+  }
+}
+
 .inventory-grid-container{
   display: flex;
   flex-direction: column;
@@ -361,19 +385,31 @@ button:active {
   }
 }
 
+
+
 // clothes container
 .inventory-clothes-container {
-  margin-top: 50px;
   width: 500px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
 }
 
 .inventory-clothes-grid {
   display:flex;
-  flex-direction: column;
-  gap: 20px;
+  flex-direction: row;
+  justify-content: space-between;
+  .odd,.even {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.inventory-clothes-grid-lastitem {
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 .clothing-item {

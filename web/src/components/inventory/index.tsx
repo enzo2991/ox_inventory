@@ -7,7 +7,6 @@ import { refreshSlots, setAdditionalMetadata, setupInventory } from '../../store
 import { useExitListener } from '../../hooks/useExitListener';
 import type { Inventory as InventoryProps } from '../../typings';
 import RightInventory from './RightInventory';
-import CenterInventory from './CenterInventory';
 import LeftInventory from './LeftInventory';
 import Tooltip from '../utils/Tooltip';
 import { closeTooltip } from '../../store/tooltip';
@@ -47,7 +46,6 @@ const Inventory: React.FC = () => {
         <div className="inventory-wrapper">
           <div className='inventory-stash'>
             <LeftInventory />
-            {/* <CenterInventory />  */}
             <RightInventory />
           </div>
           <InventoryControl />

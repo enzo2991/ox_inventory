@@ -12,6 +12,9 @@ exports('getCurrentWeapon', function()
 	return currentWeapon
 end)
 
+exports('UpdatePed', Ped.refreshPed)
+
+
 RegisterNetEvent('ox_inventory:disarm', function(noAnim)
 	currentWeapon = Weapon.Disarm(currentWeapon, noAnim)
 end)
@@ -949,7 +952,7 @@ local function updateInventory(data, weight)
 
 	for itemName, count in pairs(itemCount) do
 		local item = Items(itemName)
-
+		
         if item then
             item.count += count
 

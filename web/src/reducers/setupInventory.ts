@@ -1,7 +1,7 @@
 import { CaseReducer, PayloadAction } from '@reduxjs/toolkit';
 import { getItemData, itemDurability } from '../helpers';
 import { Items } from '../store/items';
-import { Inventory, State } from '../typings';
+import {Inventory, State} from '../typings';
 
 export const setupInventoryReducer: CaseReducer<
   State,
