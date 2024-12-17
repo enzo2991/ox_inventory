@@ -16,7 +16,7 @@ https://overextended.dev/ox_inventory
 https://github.com/enzo2991/ox_inventory/releases/download/v1.0.0/ox_inventory.zip
 
 ## 📷 Preview
-![image](https://github.com/user-attachments/assets/42b72dca-84bb-469d-8ec8-cd5eb5791e03)
+![image](https://github.com/user-attachments/assets/8fce7775-fbd1-43e8-9bbc-359a5cde5bd0)
 
 ## Supported frameworks
 
