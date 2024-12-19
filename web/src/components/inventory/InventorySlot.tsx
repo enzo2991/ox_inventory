@@ -20,11 +20,12 @@ interface SlotProps {
   inventoryId: Inventory['id'];
   inventoryType: Inventory['type'];
   inventoryGroups: Inventory['groups'];
+  filterType: string | null;
   item: Slot;
 }
 
 const InventorySlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotProps> = (
-  { item, inventoryId, inventoryType, inventoryGroups },
+  { item, inventoryId, inventoryType, inventoryGroups, filterType },
   ref
 ) => {
   const manager = useDragDropManager();
@@ -117,9 +118,12 @@ const InventorySlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotProps> =
     }
   };
 
-  
   const refs = useMergeRefs([connectRef, ref]);
 
+
+  if (isSlotWithItem(item)) {
+    console.log(item.type)
+  }
 
   return (
     <div

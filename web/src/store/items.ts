@@ -14,7 +14,7 @@ export const Items: {
   burger: {
     name: 'burger',
     close: false,
-    label: 'BURGR',
+    label: 'Burger',
     stack: false,
     usable: false,
     count: 0,
