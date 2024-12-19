@@ -20,5 +20,4 @@ export type SlotWithItem = Slot & {
   duration?: number;
   image?: string;
   grade?: number | number[];
-  type?: string;
 };

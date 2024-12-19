@@ -8,7 +8,7 @@ import { useIntersection } from '../../hooks/useIntersection';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faUser, faBagShopping, faWeightHanging, faGun, faShirt, faBurger} from '@fortawesome/free-solid-svg-icons';
 
-const InventoryGrid: React.FC<{inventory: Inventory}> = ({ inventory}) => {
+const InventoryGrid: React.FC<{inventory: Inventory}> = ({ inventory }) => {
   const PAGE_SIZE = inventory.slots;
   const [filterType, setFilterType] = useState<string | null>(null);
 

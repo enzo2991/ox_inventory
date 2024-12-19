@@ -15,6 +15,7 @@ import { ItemsPayload } from '../../reducers/refreshSlots';
 import { closeTooltip, openTooltip } from '../../store/tooltip';
 import { openContextMenu } from '../../store/contextMenu';
 import { useMergeRefs } from '@floating-ui/react';
+import { json } from 'stream/consumers';
 
 interface SlotProps {
   inventoryId: Inventory['id'];
@@ -120,9 +121,8 @@ const InventorySlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotProps> =
 
   const refs = useMergeRefs([connectRef, ref]);
 
-
-  if (isSlotWithItem(item)) {
-    console.log(item.type)
+  if (filterType && (!isSlotWithItem(item) || Items[item.name]?.category !== filterType)) {
+    return null;
   }
 
   return (

@@ -10,6 +10,7 @@ export const Items: {
     stack: true,
     usable: true,
     count: 0,
+    category: 'food'
   },
   burger: {
     name: 'burger',
@@ -18,5 +19,6 @@ export const Items: {
     stack: false,
     usable: false,
     count: 0,
+    category: 'food'
   },
 };

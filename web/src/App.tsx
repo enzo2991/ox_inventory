@@ -35,10 +35,10 @@ debugData([
               ketchup: '30%',
               mayo: '10%',
             },
-            type: 'food',
+            category: 'food',
             count: 5,
           },
-          { slot: 2, name: 'powersaw', weight: 0, count: 1, metadata: { durability: 75 }, type: 'weapon'},
+          { slot: 2, name: 'powersaw', weight: 0, count: 1, metadata: { durability: 75 }, category: 'weapon'},
           { slot: 3, name: 'copper', weight: 100, count: 12, metadata: { type: 'Special' }  },
           {
             slot: 4,
@@ -57,10 +57,10 @@ debugData([
               label: 'Pistol 9mm',
               imageurl: 'https://i.imgur.com/a4ay3Tn.png',
             },
-            type: 'weapon'
+            category: 'weapon'
           },
-          { slot: 7, name: 'Tshirt', weight: 100, count: 1, type: 'clothes', metadata:{} },
-          { slot: 8, name: 'burger', weight: 100, count: 1, type: 'food' },
+          { slot: 7, name: 'Tshirt', weight: 100, count: 1, category: 'clothes', metadata:{} },
+          { slot: 8, name: 'burger', weight: 100, count: 1, category: 'food' },
         ],
       },
       rightInventory: {

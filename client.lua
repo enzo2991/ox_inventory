@@ -1600,6 +1600,7 @@ RegisterNUICallback('uiLoaded', function(_, cb)
 end)
 
 RegisterNUICallback('getItemData', function(itemName, cb)
+	print(Items[itemName])
 	cb(Items[itemName])
 end)
 
